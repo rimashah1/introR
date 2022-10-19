@@ -12,6 +12,7 @@ temp_conv(70)
 round(temp_conv(70), digits=1)
 
 
+
 ### Part 2 Exercises ### 
 animals <- read.csv('data/animals.csv')
 rownames(animals)
@@ -40,3 +41,7 @@ proj_summary_ctrl <- cbind(proj_summary_ctrl, batch=ctrl_samples[m,])
 proj_summary_noctl <- proj_summary[which(proj_summary$treatment != "control")]
 keep <- map_lgl(proj_summary_noctl, is.numeric)
 proj_summary_noctl <- proj_summary_noctl[,keep]
+
+
+
+### Part 3 Exercises ###
