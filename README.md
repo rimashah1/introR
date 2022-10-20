@@ -1,8 +1,10 @@
 # introR
+This repo is an introduction to R.
 
-This repo follows an Intro to R tutorial, which can be found at https://hbctraining.github.io/Intro-to-R-flipped/schedules/links-to-lessons.html
 
-# hbc folder 
+# hbc_scripts folder 
+This folder follows an Intro to R tutorial, which can be found at https://hbctraining.github.io/Intro-to-R-flipped/schedules/links-to-lessons.html
+
 # part1.r
 1. Introduction to R and RStudio
 2. R Syntax and Data Structure
@@ -27,3 +29,10 @@ This repo follows an Intro to R tutorial, which can be found at https://hbctrain
 
 # exercises.r
 Exercises at the end of each part can be found in this file
+
+
+# bookdown_scripts
+This folder follows the basics of an Intro to R tutorial, which can be found at https://bookdown.org/vaabe/bookdown-demo/the-r-environment.html
+# bookdown.ipynb
+
+
