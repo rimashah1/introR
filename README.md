@@ -2,6 +2,7 @@
 
 This repo follows an Intro to R tutorial, which can be found at https://hbctraining.github.io/Intro-to-R-flipped/schedules/links-to-lessons.html
 
+# hbc folder 
 # part1.r
 1. Introduction to R and RStudio
 2. R Syntax and Data Structure
@@ -23,15 +24,6 @@ This repo follows an Intro to R tutorial, which can be found at https://hbctrain
 4. Writing to file and exporting plots
 5. Finding help
 6. Tidyverse
-
-# part4.r
-1. DGE workshop
-2. Single-cell RNA-seq workshop
-3. RMarkdown
-4. Functional analysis
-5. More ggplot2
-6. ggplot2 cookbook
-7. Resources
 
 # exercises.r
 Exercises at the end of each part can be found in this file

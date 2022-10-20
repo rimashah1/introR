@@ -45,3 +45,43 @@ proj_summary_noctl <- proj_summary_noctl[,keep]
 
 
 ### Part 3 Exercises ###
+library(tidyverse)
+
+animals_tb <- animals %>%
+  rownames_to_column(var = "animal_names") %>%
+  as_tibble()
+
+ggplot(animals_tb) +
+  geom_point(aes(x=animal_names, y=speed),color="purple") +
+  theme_bw() +
+  xlab("Animal") +
+  ylab("Speed (km/h)") +
+  ggtitle("Speed Comparisons Between Animals") +
+  theme(plot.title=element_text(hjust=0.5))
+
+# Replot with animals from slowest to fastest
+names_ordered_by_speed <- animals_tb %>% arrange(speed) %>% pull(animal_names)
+animals_tb$animal_names <- factor(animals_tb$animal_names, levels=names_ordered_by_speed)
+
+
+pdf("figures/animals_by_speed_scatterplot.pdf")
+ggplot(animals_tb) +
+  geom_point(aes(x=animal_names, y=speed),color="purple") +
+  theme_bw() +
+  xlab("Animal") +
+  ylab("Speed (km/h)") +
+  ggtitle("Speed Comparisons Between Animals") +
+  theme(plot.title=element_text(hjust=0.5))
+dev.off()
+
+
+animals_gray_tan <- animals_tb %>%
+  filter(color == "Gray" | color == "Tan")  %>%
+  arrange(speed)
+
+write.csv(animals_gray_tan,
+          file = "results/animals_tb_ordered.csv",
+          quote = FALSE)
+
+
+
